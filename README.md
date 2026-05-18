@@ -41,18 +41,3 @@ To set up your cluster, simply create a `config.json` file next to the executabl
     "[http://192.168.1.50:11434](http://192.168.1.50:11434)"
   ]
 }
-🚀 Quick Start (After Purchase)
-Download and extract your broker.zip from Gumroad.
-
-Set your unique Gumroad license key as an environment variable in PowerShell:
-
-PowerShell
-$env:OLLAMA_BROKER_LICENSE="Your-Gumroad-License-Key"
-Launch the broker:
-
-PowerShell
-.\broker.exe
-Change your AI applications (like Open WebUI or custom scripts) to point to the Broker's port instead of direct Ollama ports.
-
-📧 Support & Contact
-For license validation issues, feature requests, or enterprise inquiries, feel free to contact us at mazeikadm@gmail.com.
