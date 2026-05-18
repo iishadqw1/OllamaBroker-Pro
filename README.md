@@ -1,22 +1,32 @@
 # OllamaBroker Pro 🚀
 
-A lightweight, production-ready Windows load balancer and request queuing system designed specifically for **Ollama** backend servers. Prevent your local LLM instances from crashing due to VRAM overflow or simultaneous user requests.
+An enterprise-grade, high-performance Windows load balancer and request queuing system designed specifically for **Ollama** backend servers. Eliminate local LLM server crashes and manage multi-user traffic seamlessly.
 
 ---
 
 ## 🛒 Get OllamaBroker Pro
-OllamaBroker Pro is distributed as a standalone Windows executable (`.exe`). No Python installation or Docker required.
+OllamaBroker Pro is distributed as a standalone Windows executable (`.exe`). No Python installation, complex registries, or Docker environments are required.
 
-👉 **[Buy OllamaBroker Pro on Gumroad ($19)](https://mazeikadm.gumroad.com/l/gdpjxw)** *(👉 Įklijuok savo tikslią nuorodą čia!)*
+👉 **[Buy OllamaBroker Pro on Gumroad ($19)](https://mazeikadm.gumroad.com/l/gdpjxw)**
+
+---
+
+## 📝 Product Overview
+
+Deploying open-source Large Language Models (LLMs) locally via Ollama is a game-changer for data privacy and cost reduction. However, anyone trying to scale Ollama for multi-user environments quickly hits a major technical bottleneck: **Ollama lacks a native request queuing and load-balancing infrastructure.** When multiple developers, employees, or AI agents send requests to a single Ollama instance simultaneously, the system attempts to process them all at once. This leads to immediate VRAM overflow, extreme latency, and ultimate server crashes. 
+
+**OllamaBroker Pro fixes this exact issue.**
+
+OllamaBroker Pro acts as an intelligent, high-performance middleware layer positioned directly between your AI applications (such as Open WebUI, custom Python scripts, or corporate chatbots) and your Ollama backend infrastructure. Written in highly optimized asynchronous Python (`FastAPI` & `asyncio`) and compiled into a standalone, dependency-free Windows executable, it provides robust traffic management with virtually zero resource overhead.
 
 ---
 
 ## 🔥 Key Features
 
-* **Smart Request Queuing (FIFO):** Handles concurrent API requests and processes them sequentially to protect your GPU/VRAM from crashing.
-* **Load Balancing:** Automatically distributes incoming requests across multiple Ollama backend servers.
-* **Failover Protection:** If one Ollama instance goes offline, the broker instantly redirects traffic to available backends without dropping user sessions.
-* **Zero Dependencies:** Fully compiled `.exe` – works out of the box on standard Windows environments.
+* **Deterministic FIFO Request Queuing:** Instead of letting concurrent API requests overwhelm your GPU, OllamaBroker Pro safely holds incoming traffic in a structured queue. It feeds requests to your hardware sequentially, maximizing throughput while keeping your hardware safely within its VRAM limits.
+* **Dynamic Load Balancing:** Scale horizontally with ease. Simply add multiple Ollama backend instances across your local network (LAN) or cloud virtual private servers (VPS). The broker automatically distributes incoming inference loads evenly across all active machines.
+* **Seamless Failover Protection:** If a specific Ollama node goes offline due to a network glitch or system failure, the broker instantly detects the dropout and reroutes active user sessions to healthy nodes in real time. Your users experience zero downtime.
+* **Zero Dependencies:** Designed specifically for quick enterprise deployment. Just unpack the ZIP file, configure your IP list, and run.
 
 ---
 
